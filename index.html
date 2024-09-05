@@ -1,218 +1,126 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ราศีเมษ (Aries) - ลักษณะ, ความรัก, อาชีพ และอื่นๆ</title>
-  <meta name="description" content="เรียนรู้เกี่ยวกับราศีเมษ (Aries) - ลักษณะนิสัย, ความรัก, อาชีพที่เหมาะสม, และข้อมูลโหราศาสตร์อื่นๆ สำหรับผู้ที่เกิดระหว่าง 21 มีนาคม - 19 เมษายน">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-      /* Pink Pastel Theme for Horoscope Website */
-
-      :root {
-          --primary-color: #FFB6C1; /* Light Pink */
-          --secondary-color: #FF69B4; /* Hot Pink */
-          --background-color: #FFF0F5; /* Lavender Blush */
-          --text-color: #4B0082; /* Indigo */
-          --accent-color: #FF1493; /* Deep Pink */
-          --card-background: #FFFFFF; /* White */
-          --transition-speed: 0.3s;
-      }
-
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-
-      body {
-          font-family: 'Poppins', sans-serif;
-          background-color: var(--background-color);
-          color: var(--text-color);
-          line-height: 1.6;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-          font-weight: 600;
-          margin-bottom: 1rem;
-          color: var(--accent-color);
-      }
-
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 2rem; }
-
-      p { margin-bottom: 1rem; }
-
-      .container {
-          width: 90%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 2rem 0;
-      }
-
-      nav {
-          background-color: var(--primary-color);
-          padding: 1rem 0;
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          box-shadow: 0 2px 4px rgba(255, 182, 193, 0.3);
-      }
-
-      nav ul {
-          display: flex;
-          justify-content: center;
-          list-style-type: none;
-      }
-
-      nav ul li {
-          margin: 0 1rem;
-      }
-
-      nav ul li a {
-          color: var(--text-color);
-          text-decoration: none;
-          font-weight: 400;
-          transition: color var(--transition-speed);
-      }
-
-      nav ul li a:hover {
-          color: var(--accent-color);
-      }
-
-      .card {
-          background-color: var(--card-background);
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(255, 182, 193, 0.1);
-          padding: 1.5rem;
-          margin-bottom: 2rem;
-          transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-          border: 1px solid var(--primary-color);
-      }
-
-      .card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 6px 12px rgba(255, 182, 193, 0.2);
-      }
-
-      .aries-symbol {
-          font-size: 3rem;
-          color: var(--secondary-color);
-      }
-
-      footer {
-          background-color: var(--primary-color);
-          color: var(--text-color);
-          text-align: center;
-          padding: 2rem 0;
-          margin-top: 2rem;
-      }
-
-      @media (max-width: 768px) {
-          nav ul {
-              flex-direction: column;
-              align-items: center;
-          }
-
-          nav ul li {
-              margin: 0.5rem 0;
-          }
-      }
-
-      .fade-in {
-          animation: fadeIn 1s ease-in;
-      }
-
-      @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-      }
-
-      .text-center { text-align: center; }
-      .mt-2 { margin-top: 2rem; }
-      .mb-2 { margin-bottom: 2rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - เว็บไซต์โหราศาสตร์ของคุณ</title>
+    <meta name="description" content="ค้นพบดวงชะตาของคุณผ่านโหราศาสตร์ ดูดวงรายวัน รายสัปดาห์ และรายเดือน พร้อมคำทำนายแม่นยำ">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <nav>
-  <ul>
-    <li><a href="/">หน้าแรก</a></li>
-    <li><a href="/ราศี/">ราศี</a></li>
-    <li><a href="/ดวงประจำวัน/">ดวงประจำวัน</a></li>
-    <li><a href="/ดวงความรัก/">ดวงความรัก</a></li>
-    <li><a href="/ติดต่อเรา/">ติดต่อเรา</a></li>
-  </ul>
+    <ul class="nav-menu">
+        <li><a href="/index.html">หน้าแรก</a></li>
+        <li class="dropdown">
+            <a href="/#/">ราศี</a>
+            <ul class="dropdown-content">
+                <li><a href="/zodiac-signs/aries.html">ราศีเมษ</a></li>
+                <li><a href="/zodiac-signs/taurus.html">ราศีพฤษภ</a></li>
+                <li><a href="/zodiac-signs/gemini.html">ราศีเมถุน</a></li>
+                <li><a href="/zodiac-signs/cancer.html">ราศีกรกฎ</a></li>
+                <li><a href="/zodiac-signs/leo.html">ราศีสิงห์</a></li>
+                <li><a href="/zodiac-signs/virgo.html">ราศีกันย์</a></li>
+                <li><a href="/zodiac-signs/libra.html">ราศีตุลย์</a></li>
+                <li><a href="/zodiac-signs/scorpio.html">ราศีพิจิก</a></li>
+                <li><a href="/zodiac-signs/sagittarius.html">ราศีธนู</a></li>
+                <li><a href="/zodiac-signs/capricorn.html">ราศีมังกร</a></li>
+                <li><a href="/zodiac-signs/aquarius.html">ราศีกุมภ์</a></li>
+                <li><a href="/zodiac-signs/pisces.html">ราศีมีน</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="/horoscopes/index.html">ดวงชะตา</a>
+            <ul class="dropdown-content">
+                <li><a href="/horoscopes/daily.html">ดวงรายวัน</a></li>
+                <li><a href="/horoscopes/weekly.html">ดวงรายสัปดาห์</a></li>
+                <li><a href="/horoscopes/monthly.html">ดวงรายเดือน</a></li>
+                <li><a href="/horoscopes/yearly.html">ดวงรายปี</a></li>
+            </ul>
+        </li>
+        <li><a href="/love-compatibility.html">ดวงความรัก</a></li>
+        <li class="dropdown">
+            <a href="/astrology-articles/index.html">บทความโหราศาสตร์</a>
+            <ul class="dropdown-content">
+                <li><a href="/astrology-articles/zodiac-elements.html">ธาตุประจำราศี</a></li>
+                <li><a href="/astrology-articles/moon-phases.html">ข้างขึ้นข้างแรม</a></li>
+                <li><a href="/astrology-articles/planets.html">ดาวเคราะห์ในโหราศาสตร์</a></li>
+            </ul>
+        </li>
+        <li><a href="/tarot/index.html">ไพ่ทาโรต์</a></li>
+        <li><a href="/numerology/index.html">ตัวเลขศาสตร์</a></li>
+        <li><a href="/chinese-zodiac/index.html">นักษัตรจีน</a></li>
+        <li><a href="/about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="/contact.html">ติดต่อเรา</a></li>
+    </ul>
 </nav>
-
 <div class="container">
-  <header class="text-center mt-2 mb-2 fade-in">
-    <h1>ราศีเมษ (Aries) <span class="aries-symbol">♈</span></h1>
-    <p>21 มีนาคม - 19 เมษายน</p>
-  </header>
-
-  <main>
-    <section class="card fade-in">
-      <h2>ลักษณะทั่วไปของชาวราศีเมษ</h2>
-      <p>ชาวราศีเมษเป็นผู้นำตามธรรมชาติ มีความกล้าหาญ มั่นใจ และมีพลังงานสูง พวกเขามักจะ:</p>
-      <ul>
-        <li>มีความกระตือรือร้นและชอบความท้าทาย</li>
-        <li>ตรงไปตรงมาและซื่อสัตย์</li>
-        <li>มีความคิดสร้างสรรค์และมีไอเดียใหม่ๆ อยู่เสมอ</li>
-        <li>ชอบเป็นผู้นำและริเริ่มสิ่งใหม่ๆ</li>
-        <li>มีความอดทนต่ำและอาจหุนหันพลันแล่น</li>
-      </ul>
-    </section>
-
-    <section class="card fade-in">
-      <h2>ความรักและความสัมพันธ์</h2>
-      <p>ในด้านความรัก ชาวราศีเมษมักจะ:</p>
-      <ul>
-        <li>มีความหลงใหลและโรแมนติก</li>
-        <li>ชอบการผจญภัยและความตื่นเต้นในความสัมพันธ์</li>
-        <li>ต้องการคู่ครองที่เข้าใจความต้องการอิสระของพวกเขา</li>
-        <li>อาจมีอารมณ์ร้อนแต่ก็รักอย่างลึกซึ้ง</li>
-      </ul>
-    </section>
-
-    <section class="card fade-in">
-      <h2>อาชีพที่เหมาะสม</h2>
-      <p>ด้วยลักษณะนิสัยที่กล้าหาญและมีความคิดสร้างสรรค์ อาชีพที่เหมาะกับชาวราศีเมษ ได้แก่:</p>
-      <ul>
-        <li>ผู้ประกอบการหรือเจ้าของธุรกิจ</li>
-        <li>นักการตลาดหรือนักโฆษณา</li>
-        <li>นักกีฬาหรือโค้ช</li>
-        <li>นักดับเพลิงหรือเจ้าหน้าที่กู้ภัย</li>
-        <li>นักแสดงหรือนักร้อง</li>
-      </ul>
-    </section>
-
-    <section class="card fade-in">
-      <h2>ข้อมูลเพิ่มเติมทางโหราศาสตร์</h2>
-      <ul>
-        <li>ธาตุประจำราศี: ไฟ</li>
-        <li>ดาวประจำราศี: ดาวอังคาร</li>
-        <li>สีมงคล: แดง, ส้ม</li>
-        <li>หินมงคล: เพชร, ทับทิม</li>
-        <li>วันมงคล: อังคาร</li>
-      </ul>
-    </section>
-
-    <section class="card fade-in">
-      <h2>คำแนะนำสำหรับชาวราศีเมษ</h2>
-      <p>เพื่อให้ชีวิตมีความสุขและประสบความสำเร็จมากขึ้น ชาวราศีเมษควร:</p>
-      <ul>
-        <li>ฝึกความอดทนและการควบคุมอารมณ์</li>
-        <li>เรียนรู้ที่จะรับฟังผู้อื่นมากขึ้น</li>
-        <li>พิจารณาผลลัพธ์ระยะยาวก่อนตัดสินใจ</li>
-        <li>ฝึกการทำสมาธิเพื่อลดความเครียด</li>
-        <li>หาสมดุลระหว่างการทำงานและการพักผ่อน</li>
-      </ul>
-    </section>
-  </main>
+<div class="hero-section fade-in">
+    <h1>ค้นพบดวงชะตาของคุณ</h1>
+    <p class="hero-subtitle">เรียนรู้เกี่ยวกับตัวคุณผ่านดวงดาวและราศี</p>
+    <a href="/horoscopes/daily.html" class="cta-button">ดูดวงวันนี้</a>
 </div>
 
+<section class="intro-section card fade-in">
+    <p>ยินดีต้อนรับสู่เว็บไซต์โหราศาสตร์ของเรา ที่นี่คุณจะได้เรียนรู้เกี่ยวกับราศีของคุณ ดูดวงประจำวัน และค้นพบเคล็ดลับในการใช้ชีวิตที่สอดคล้องกับดวงดาวของคุณ</p>
+</section>
+
+<section class="quick-links-section fade-in">
+    <h2>ค้นหาราศีของคุณ</h2>
+    <div class="zodiac-grid">
+        <a href="/zodiac-signs/aries.html" class="zodiac-item">
+            <span class="zodiac-symbol">♈</span>
+            <span class="zodiac-name">ราศีเมษ</span>
+        </a>
+        <a href="/zodiac-signs/taurus.html" class="zodiac-item">
+            <span class="zodiac-symbol">♉</span>
+            <span class="zodiac-name">ราศีพฤษภ</span>
+        </a>
+        <a href="/zodiac-signs/gemini.html" class="zodiac-item">
+            <span class="zodiac-symbol">♊</span>
+            <span class="zodiac-name">ราศีเมถุน</span>
+        </a>
+        <a href="/zodiac-signs/cancer.html" class="zodiac-item">
+            <span class="zodiac-symbol">♋</span>
+            <span class="zodiac-name">ราศีกรกฎ</span>
+        </a>
+        <a href="/zodiac-signs/leo.html" class="zodiac-item">
+            <span class="zodiac-symbol">♌</span>
+            <span class="zodiac-name">ราศีสิงห์</span>
+        </a>
+        <a href="/zodiac-signs/virgo.html" class="zodiac-item">
+            <span class="zodiac-symbol">♍</span>
+            <span class="zodiac-name">ราศีกันย์</span>
+        </a>
+        <a href="/zodiac-signs/libra.html" class="zodiac-item">
+            <span class="zodiac-symbol">♎</span>
+            <span class="zodiac-name">ราศีตุลย์</span>
+        </a>
+        <a href="/zodiac-signs/scorpio.html" class="zodiac-item">
+            <span class="zodiac-symbol">♏</span>
+            <span class="zodiac-name">ราศีพิจิก</span>
+        </a>
+        <a href="/zodiac-signs/sagittarius.html" class="zodiac-item">
+            <span class="zodiac-symbol">♐</span>
+            <span class="zodiac-name">ราศีธนู</span>
+        </a>
+        <a href="/zodiac-signs/capricorn.html" class="zodiac-item">
+            <span class="zodiac-symbol">♑</span>
+            <span class="zodiac-name">ราศีมังกร</span>
+        </a>
+        <a href="/zodiac-signs/aquarius.html" class="zodiac-item">
+            <span class="zodiac-symbol">♒</span>
+            <span class="zodiac-name">ราศีกุมภ์</span>
+        </a>
+        <a href="/zodiac-signs/pisces.html" class="zodiac-item">
+            <span class="zodiac-symbol">♓</span>
+            <span class="zodiac-name">ราศีมีน</span>
+        </a>
+    </div>
+</section></div>
+
 <footer>
-  <p>ข้อมูลนี้ใช้เพื่อความบันเทิงเท่านั้น โปรดใช้วิจารณญาณในการพิจารณา</p>
+    <p>ข้อมูลนี้ใช้เพื่อความบันเทิงเท่านั้น โปรดใช้วิจารณญาณในการพิจารณา</p>
 </footer>
 </body>
 </html>
